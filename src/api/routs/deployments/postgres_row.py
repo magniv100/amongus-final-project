@@ -1,9 +1,12 @@
-from sqlalchemy import Column, String, DateTime
+from sqlalchemy import Column, String, DateTime, engine, create_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped
 
 
 class Base(DeclarativeBase):
     pass
+
+
+engine = create_engine("postgresql://origa:password@localhost/postgres", echo=True)
 
 
 class DeploymentRow(Base):
@@ -13,3 +16,5 @@ class DeploymentRow(Base):
     status: Mapped[str] = Column(String)
     username: Mapped[str] = Column(String)
     creation_time: Mapped[str] = Column(DateTime)
+
+Base.metadata.create_all(engine)

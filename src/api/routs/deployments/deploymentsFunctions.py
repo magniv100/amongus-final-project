@@ -1,10 +1,12 @@
 import datetime
 import uuid
+from typing import Any
 
 import sqlalchemy as db
 from pymongo import MongoClient
-from sqlalchemy import create_engine, MetaData
-from sqlalchemy.orm import sessionmaker, session
+from sqlalchemy import create_engine, MetaData, select
+from sqlalchemy.engine import row
+from sqlalchemy.orm import sessionmaker, session, Session
 
 from src.api.routs.deployments.postgres_row import DeploymentRow
 
@@ -42,6 +44,13 @@ def add_new_row_to_deployment(db_name: str, username: str,) -> str:
     session.commit()
     return table_id
 
+def deployments_parts(id_:str):
+    engine = create_engine("postgresql://origa:password@localhost/postgres", echo=True)
+    stmn = select(DeploymentRow).where(DeploymentRow.id == id_)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    for u in session.execute(stmn).all():
+       return (u[0].db_name,u[0].status ,u[0].creation_time)
 
 
 

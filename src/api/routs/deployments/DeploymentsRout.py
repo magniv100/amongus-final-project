@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
 from src.api.routs.deployments.deploymentsFunctions import IsNameOk, add_new_row_to_deployment, \
-    create_new_deployment_mongo
+    create_new_deployment_mongo, deployments_parts
 
 deployments_router = APIRouter(prefix="/deployments_router")
 
@@ -15,5 +15,9 @@ def create_deployment(db_name:str, user_name:str):
         return deployments_router.responses(status_code=422)
 
 
+
+@deployments_router.get("/")
+def get_deployments(id: str):
+    return deployments_parts(id)
 
 

@@ -3,7 +3,7 @@ import uuid
 from typing import Any
 
 import sqlalchemy as db
-from pymongo import MongoClient
+from pymongo import MongoClient, collection
 from sqlalchemy import create_engine, MetaData, select
 from sqlalchemy.engine import row
 from sqlalchemy.orm import sessionmaker, session, Session
@@ -37,20 +37,39 @@ def create_new_deployment_mongo(db_name: str):
 def add_new_row_to_deployment(db_name: str, username: str,) -> str:
     engine = create_engine("postgresql://origa:password@localhost/postgres", echo=True)
     table_id = str(uuid.uuid4())
-    row = DeploymentRow(id=table_id, db_name=db_name, status="CREATED" ,username=username ,creation_time=datetime.datetime.now())
+    row = DeploymentRow(id=table_id, db_name= "matmon22 -" + db_name, status="CREATED" ,username=username ,creation_time=datetime.datetime.now())
     Session = sessionmaker(bind=engine)
     session = Session()
     session.add(row)
     session.commit()
     return table_id
 
-def deployments_parts(id_:str):
+def deployments_parts(id_:str) -> dict[str, Any] | None:
     engine = create_engine("postgresql://origa:password@localhost/postgres", echo=True)
     stmn = select(DeploymentRow).where(DeploymentRow.id == id_)
     Session = sessionmaker(bind=engine)
     session = Session()
     for u in session.execute(stmn).all():
-       return (u[0].db_name,u[0].status ,u[0].creation_time)
+        parts:dict = {"db_name": u[0].db_name, "status": u[0].status, "creation_time": u[0].creation_time}
+        return parts
+    return None
+
+
+def delete_deployment(db_name: str):
+    client = MongoClient("mongodb://admin:123456@localhost:27017/?authSource=admin")
+    client.drop_database(db_name)
+
+
+def change_status(id_:str):
+    engine = create_engine("postgresql://origa:password@localhost/postgres", echo=True)
+    stmn = select(DeploymentRow).where(DeploymentRow.id == id_)
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    for u in session.execute(stmn).all():
+        u.status = "DELETED "
+
+
+
 
 
 

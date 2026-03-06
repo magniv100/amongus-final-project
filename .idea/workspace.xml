@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8749a32a-398b-4479-8c0c-7aaa52a9812e" name="Changes" comment="add all to dev">
+    <list default="true" id="8749a32a-398b-4479-8c0c-7aaa52a9812e" name="Changes" comment="get by id created &amp; working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/routs/deployments/DeploymentsRout.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routs/deployments/DeploymentsRout.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/routs/deployments/deploymentsFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routs/deployments/deploymentsFunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/routs/deployments/postgres_row.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routs/deployments/postgres_row.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python.deploymentsFunctions.executor": "Run",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -122,7 +121,15 @@
       <option name="project" value="LOCAL‎" />
       <updated>1772713472874</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL‎-00005" summary="get by id created &amp; working">
+      <option name="closed" value="true" />
+      <created>1772723051199</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL‎-00005" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1772723051199</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +163,18 @@
     <MESSAGE value="new brach dev" />
     <MESSAGE value="created the dir and files of deployments" />
     <MESSAGE value="add all to dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="add all to dev" />
+    <MESSAGE value="get by id created &amp; working" />
+    <option name="LAST_COMMIT_MESSAGE" value="get by id created &amp; working" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/api/routs/deployments/DeploymentsRout.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

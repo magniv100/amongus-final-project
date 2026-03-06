@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8749a32a-398b-4479-8c0c-7aaa52a9812e" name="Changes" comment="get by id created &amp; working">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/routs/deployments/DeploymentsRout.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routs/deployments/DeploymentsRout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/routs/deployments/deploymentsFunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routs/deployments/deploymentsFunctions.py" afterDir="false" />
-    </list>
+    <list default="true" id="8749a32a-398b-4479-8c0c-7aaa52a9812e" name="Changes" comment="get by id created &amp; working" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="first-rout-working" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,7 +59,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "first-rout-working",
+    "git-widget-placeholder": "dev",
     "junie.onboarding.icon.badge.shown": "true",
     "to.speed.mode.migration.done": "true"
   },
